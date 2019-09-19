@@ -1,0 +1,54 @@
+body {
+    background-image: url(../images/blur-city-clouds-417013.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.jumbotron {
+    background-color: #202126;
+    color: #fff;
+    padding: 20px;
+    font-style: italic;
+}
+
+.display-4 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.lead {
+    padding-left: 150px;
+}
+
+.spacer {
+    padding-top: 20px;
+}
+
+#clock {
+    color: #fff;
+}
+
+.formspacer {
+    padding: 20px;
+    line-height: 30px;
+}
+
+.card-header {
+    background-color: #BEBBBB;
+}
+
+.btnspacer {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #E86808;
+    border: 0px;
+}
+
+.card {
+    background-color: #EFEFEF;
+}

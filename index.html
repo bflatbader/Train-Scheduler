@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Font awesome -->
+     <script src="https://kit.fontawesome.com/eeaaa00cac.js"></script>
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="assets/css/style.css">
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+     <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+    <!-- MomentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Train Scheduler</title>
+</head>
+<body>
+    <!-- Begin boostrap -->
+    <div class="container">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-4"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>&nbsp;Elliotrac Lines</h1>
+                      <p class="lead">We're committed to keeping you on track!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Clock -->
+        <div class="row">
+            <div class="col-md-12">
+                <blockquote class="blockquote">
+                    <p id="clock" class="text-center"></p>
+                </blockquote>
+            </div>
+        </div>
+        <!-- Current Train Schedule -->
+        <div class="row spacer">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Current Train Schedule</div>
+                    <!-- Table -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody id="trainTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Add New Train</div>
+                    <!-- Form -->
+                    <form>
+                        <div class="form-group formspacer">
+                            <label for="train-name">Train Name</label>
+                            <input type="text" id="train-name" class='form-control' placeholder="Doe Express">
+                            <label for="train-destination">Destination</label>
+                            <input type="text" id="train-destination" class='form-control' placeholder="Plainville">
+                            <label for="train-start">First Train Time (HH:mm - military time)</label>
+                            <input type="time" id="train-start" class='form-control' placeholder="000000">
+                            <label for="train-frequency">Frequency (min)</label>
+                            <input type="number" id="train-frequency" class='form-control' placeholder="10">
+                            <button id="addTrain" type="button" class="btn btn-dark btnspacer">Submit</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- end boostrap container -->
+    </div>
+    <!-- JavaScript -->
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
