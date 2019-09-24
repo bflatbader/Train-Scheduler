@@ -11,9 +11,17 @@ body {
 .jumbotron {
     background-color: #202126;
     color: #fff;
-    padding: 5px;
+    padding: 10px;
     font-style: italic;
     margin: 0;
+}
+
+#chev1 { 
+    color: #fa713b;
+}
+
+#chev2 {
+    color: #f2b112;
 }
 
 .display-4 {
@@ -22,6 +30,7 @@ body {
 
 .lead {
     padding-left: 150px;
+    color: #ACA885;
 }
 
 .spacer {
@@ -36,6 +45,7 @@ body {
 
 #clock {
     color: #fff;
+    font-family: 'Teko', sans-serif;
 }
 
 .formspacer {
