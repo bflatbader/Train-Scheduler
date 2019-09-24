@@ -11,8 +11,9 @@ body {
 .jumbotron {
     background-color: #202126;
     color: #fff;
-    padding: 20px;
+    padding: 5px;
     font-style: italic;
+    margin: 0;
 }
 
 .display-4 {
@@ -25,6 +26,12 @@ body {
 
 .spacer {
     padding-top: 20px;
+}
+
+.blockquote {
+    background-color: #202126;
+    padding: 20px;
+    padding-bottom: 5px;
 }
 
 #clock {
