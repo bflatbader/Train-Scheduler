@@ -9,6 +9,7 @@ function tableUpdate () {
         var sv = snapshot.val();
         console.log(sv.trainName, sv.trainDestination, sv.trainStart, sv.trainFrequency);
 
+        // Determine when the next train will arrive and how long 'til it arrives
         var timeConvert = moment(sv.trainStart, "HHmm").subtract(1, "years");
         var timeDifference = moment().diff(moment(timeConvert), "minutes");
         var timeRemaining = timeDifference % sv.trainFrequency;
@@ -27,6 +28,7 @@ function tableUpdate () {
         </tr>
         `;
 
+        // Add train info to the HTML document
         $('#trainTable').append(trainInfo);
         
         // Handle the errors
@@ -36,8 +38,11 @@ function tableUpdate () {
 }
 
 function timeUpdate () {
+    // Get current time
     currentTime = moment();
+    // Update clock
     $("#clock").text(currentTime.format("HH:mm:ss A"));
+    // Update HTML document with train information
     tableUpdate();
 }
 
@@ -55,10 +60,12 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   var database = firebase.database();
 
+// Initialize variables to use
 var trainName = "";
 var trainDestination = "";
 var trainStart;
 var trainFrequency;
+// Get current time
 var currentTime = moment();
 
 // When Submit button is clicked
